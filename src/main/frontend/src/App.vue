@@ -1,85 +1,123 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderForAll from './components/HeaderForAll.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+      <HeaderForAll class="headerGijon" msg="Gijón Events" />
     </div>
   </header>
 
-  <RouterView />
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/request">Request list</RouterLink>
+      </nav>
+
+    <RouterView />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+ 
 header {
-  line-height: 1.5;
   max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
+//este es contenedor del nav
 nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
+  width: 11em;
+  height: 20%;
   margin-top: 2rem;
+  // margin-right: 10em;
+  background-color: rgba(227, 217, 231, 0.5);
+  border-bottom: 1px solid;
+  border-radius: 15px;
 }
 
+//menú del nav
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: #e7e6d9;
+  padding: 0.2em;
 }
 
+//hover botones nav
 nav a.router-link-exact-active:hover {
-  background-color: transparent;
+  background-color: #55A06F;
 }
 
+//color y características de los botones
 nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  border-radius: 14px;
+  font-size: 1.2em;
+  background-color: #33206C;
 }
 
-nav a:first-of-type {
-  border: 0;
+
+@media (min-width: 1440px) {
+  
+    header {
+    display: flex;
+    place-items: center;
+  }
+  nav  {
+ 
+  background-color: red;
+
+  }
+  
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
+  nav  {
+    
+    background-color: black;
+  }
+}
+
+@media (min-width: 768px) {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
   }
 
   nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
+    
+    // margin-left: -32%;
+    font-size: 1em;
+    padding: 0.5rem 0;
     margin-top: 1rem;
+    height: 26rem;
+    
   }
 }
+
+// @media (min-width: 768px) {
+//   header {
+//     display: flex;
+//     place-items: center;
+//   }
+
+//   nav {
+    
+//     margin-left: -32%;
+//     font-size: 1em;
+//     padding: 0.5rem 0;
+//     margin-top: 1rem;
+//     height: 26rem;
+
+//   }
+// }
+
+
 </style>
