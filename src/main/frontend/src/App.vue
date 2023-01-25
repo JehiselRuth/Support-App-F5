@@ -20,19 +20,13 @@ import HeaderForAll from './components/HeaderForAll.vue'
 
 <style lang="scss" scoped>
  
-header {
-  max-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 //este es contenedor del nav
 nav {
   width: 11em;
-  height: 20%;
-  margin-top: 2rem;
-  // margin-right: 10em;
+  height: 100%;
+  margin-bottom: 4%;
   background-color: rgba(227, 217, 231, 0.5);
   border-bottom: 1px solid;
   border-radius: 15px;
@@ -40,7 +34,7 @@ nav {
 
 //menú del nav
 nav a.router-link-exact-active {
-  color: #e7e6d9;
+  color: #ffffff;
   padding: 0.2em;
 }
 
@@ -60,64 +54,43 @@ nav a {
   margin-top: 0.5em;
   border-radius: 14px;
   font-size: 1.2em;
-  background-color: #33206C;
+  background-color: #A08AEE;
 }
 
 
 @media (min-width: 1440px) {
-  
-    header {
-    display: flex;
-    place-items: center;
-  }
-  nav  {
- 
-  background-color: red;
 
+  nav  {
+    margin-left: -54%;
   }
-  
 }
 
 @media (max-width: 1024px) {
   nav  {
-    
-    background-color: black;
+    margin-left: -34%;
   }
 }
 
 @media (min-width: 768px) {
-  header {
-    display: flex;
-    place-items: center;
-  }
-
+  
   nav {
     
-    // margin-left: -32%;
     font-size: 1em;
     padding: 0.5rem 0;
-    margin-top: 1rem;
+    margin-top: 3rem;
     height: 26rem;
-    
+
   }
 }
 
-// @media (min-width: 768px) {
-//   header {
-//     display: flex;
-//     place-items: center;
-//   }
+@media (max-width: 320px) 
 
-//   nav {
-    
-//     margin-left: -32%;
-//     font-size: 1em;
-//     padding: 0.5rem 0;
-//     margin-top: 1rem;
-//     height: 26rem;
-
-//   }
-// }
-
+ {
+  header  {
+text-align: center;
+  justify-content: center;
+  align-items: center;  
+ }
+}
 
 </style>

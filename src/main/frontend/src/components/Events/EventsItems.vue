@@ -105,21 +105,6 @@
     color: #33206c;
   }
   
-  @media (min-width: 1024px) {
-    .item {
-      margin-top: 0;
-    }
-   }
-
-   @media (max-width: 320px) {
-    .wrapper {
-      display: grid;
-      grid-template-columns: 1fr;
-      width: 100%;
-      margin-left: -1em;
-    }
-    
-   }
 
 
   </style>

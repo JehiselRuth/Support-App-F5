@@ -15,9 +15,23 @@ import  EventsItems from '../components/Events/EventsItems.vue'
 
  {
   main  {
-  margin-top: -76%;
+  margin-top: 6em;
+  margin-left: 2.7em;
+  max-width: 30em;
  }
 }
+
+
+@media (min-width: 461px) 
+
+ {
+  main  {
+  margin-left: 3.4em;
+  max-width: 30em;
+ }
+}
+
+
 
 </style>
 

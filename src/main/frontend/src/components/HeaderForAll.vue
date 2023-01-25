@@ -27,37 +27,15 @@ h1 {
   align-items: center;
   font-weight:600;
   font-size: 3rem;
-  margin-bottom: 7%;
+  margin-bottom: 5%;
 }
 //Texto inicial de la pagina
 h3 {
   font-size: 1.6rem;
-}
-.headerGijonEvents h3 {
-  align-items: center;
   text-align: center;
+  color: #ffffff;
   justify-content: center;
   display: flex;
-  color: #ece0f0;
-  
-}
-
-@media (min-width: 1024px) {
-  .headerGijonEvents h1  {
-    margin-top: 6%;
-  }
-  .headerGijonEvents h3 {
-    text-align: center;
-    color: #ede0f2;
-  }
-}
-@media (max-width: 320px) {
-  header  {
-margin-left: 8%;
- 
- 
-}
-
 }
 
 </style>
