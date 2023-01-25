@@ -1,12 +1,14 @@
 package api.models;
 
 import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import api.payloads.RequestPayload;
 import api.repositories.mysql.MysqlConnexion;
 
 public class Request {
@@ -71,32 +73,54 @@ public class Request {
 
 
 
-    public List<Request> index() {
+    public List<Object> index() {
+
+        
         try {
             Statement statement = repository.conn.createStatement();
             String sql = String.format("SELECT * FROM %s", table);
             ResultSet rs = statement.executeQuery(sql);
 
-            List<Request> requests = new ArrayList<Request>();
+            List<Object> requests = new ArrayList<>();
 
             while (rs.next()) {
-                this.event = rs.getString("event");
-                this.name = rs.getString("name");
-                this.date = rs.getDate("date");
-                this.description = rs.getString("description");
-                requests.add(this);
+                RequestPayload request = new RequestPayload();
+                request.setEvent(rs.getString("event"));
+                request.setName(rs.getString("name"));
+                request.setDate(rs.getDate("date"));
+                request.setDescription(rs.getString("description"));
+                requests.add(request);
             }
             System.out.println(requests);
             return requests;
 
         } catch (Exception e) {
-            System.out.println("Exception: "+ e.getMessage());
-            return null;
+            System.out.println("Sql Exception: "+ e.getMessage());
+            return null; 
         }
         
        
 
     }
-  
+  public RequestPayload save(RequestPayload request) throws SQLException {
+    String sql_insert = "INSERT INTO requests (name,date,event,description) VALUES (?,?,?,?)";
+    PreparedStatement preparedStatement = repository.conn.prepareStatement(sql_insert);
+        preparedStatement.setString(1, request.getName());
+        preparedStatement.setDate(2, null);
+        preparedStatement.setString(3, null);
+        preparedStatement.setString(4, null);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
+        Statement statement = repository.conn.createStatement();
+        String sql = String.format("SELECT * FROM %s ORDER BY date DESC", table);
+        ResultSet rs = statement.executeQuery(sql);
+        while (rs.next()) {
+            request.setName(rs.getString("name"));
+            request.setDate(rs.getDate("date"));
+            request.setEvent(rs.getString("event"));
+            request.setDescription(rs.getString("description"));
+        }
+return request;
+  }
 
 }
