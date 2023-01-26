@@ -29,48 +29,58 @@
 #bigDiv{
     background-color: #E3D9E7;
     border-radius: 5%;
-    width: 50vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
+    width: 28em;
+    height: 70%;
     justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5em;
+    margin-left: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
 
 
  h1{
     color: #262528;
-    font-size: 5vw;
+    font-size: 2em;
+    text-align: center;   
     font-family: Title;
 
 }   
 
 #form{
     background-color: #fff;
-    width: 35vw;
-    height: 60vh;
+    width: 80%;
+    height: 20em;
     border-radius: 5%;
     display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
     justify-content: center;
 
 
 #inputs{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 
 .formText{
-    height: 3vw; 
-    width: 30vw;
+    height: 3.2em; 
+    width: 19em;
     background-color: #A08AEE;
     border-radius: 50px;
     justify-content: center;
     padding: 0em 0em 0em 1em;
     border: none;
-    margin-top: 2em;  
+    margin-top: 0.5em;  
  }
 
  #descriptión{
-    height: 5vw; 
-    width: 30vw;
+    height: 2em; 
+    width: 19em;
     background-color: #A08AEE;
     border-radius: 50px;
     justify-content: center;
@@ -87,13 +97,13 @@
     justify-content: space-between;
     justify-content: space-around;
     bottom: 80px;
-    position: relative;
+  
 
 #cancel{
     border-radius: 10vw;
     background-color: #A08AEE;
-    width: 5vw;
-    height: 3vw;
+    width: 85%;
+    height: 28%;
     margin-bottom: 0.5vh;
     font-size: 1vw; 
     margin-left: 1vw;
@@ -101,8 +111,8 @@
 #validate{
     border-radius: 10vw;
     background-color: #55A06F;
-    width: 5vw;
-    height: 3vw;
+    width: 85%;
+    height: 28%;
     margin-bottom: 0.5vh;
     font-size: 1vw; 
     margin-left: 1vw;

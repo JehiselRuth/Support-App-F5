@@ -12,7 +12,7 @@ defineProps({
   <div class="headerGijonEvents">
     <h1 class="msgHomeView">{{ msg }}</h1>
     <h3>
-      Select here the event for your accreditation 
+      Select here your request 
     </h3>
   </div>
 </header>
@@ -30,17 +30,18 @@ h1 {
   justify-content: center;
   align-items: center;
   font-weight:600;
-  font-size: 7vw;
-  margin-bottom: 5%;
+  font-size: 6vw;
+  line-height: 5vh;
 }
 
 h3 {
   font-family: Title;
-  font-size: 1.6rem;
+  font-size: 3vw;
   text-align: center;
   color: #ffffff;
   justify-content: center;
   display: flex;
 }
+
 
 </style>

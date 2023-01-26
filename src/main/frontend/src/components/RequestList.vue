@@ -2,38 +2,40 @@
 </script>
 
 <template>
-<div id="bigDiv">
- <h1>Request list</h1>
- <div id="table">
-  <table class="Request">
-    <tr>
-        <th>Event</th>
-        <th>Name</th>
-        <th>Date</th>
-    </tr>
-    <tr>
-        <td>Concierto Rolling Stones</td>
-        <td>Guillermo</td>
-        <td>12/06/23</td>
-    </tr>
-    <tr>
-        <td>Champions Sporting-Arsenal</td>
-        <td>Diego</td>
-        <td>01/04/23</td>
-    </tr>
-    <tr>
-        <td>Gijón Open ATP-250</td>
-        <td>Vitoria</td>
-        <td>01/09/23</td>
-    </tr>
-    <tr>
-        <td>Torneo Bolo Celta</td>
-        <td>Jehisel</td>
-        <td>28/12/23</td>
-    </tr>
+<div class="superDiv">
+    <div id="bigDiv">
+        <h1>Request list</h1>
+    <div id="table">
+    <table class="Request">
+        <tr>
+            <th>Event</th>
+            <th>Name</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            <td>Concierto Rolling Stones</td>
+            <td>Guillermo</td>
+            <td>12/06/23</td>
+        </tr>
+        <tr>
+            <td>Champions Sporting-Arsenal</td>
+            <td>Diego</td>
+            <td>01/04/23</td>
+        </tr>
+        <tr>
+            <td>Gijón Open ATP-250</td>
+            <td>Vitoria</td>
+            <td>01/09/23</td>
+        </tr>
+        <tr>
+            <td>Torneo Bolo Celta</td>
+            <td>Jehisel</td>
+            <td>28/12/23</td>
+        </tr>
 
-  </table>
-  </div>
+    </table>
+    </div>
+    </div>
 </div>
 </template>
 
@@ -46,32 +48,37 @@
 #bigDiv{
     background-color: #E3D9E7;
     border-radius: 5%;
-    width: 50vw;
-    height: 90vh;
+    width: 40em;
+    padding-bottom: 5em;
+    height: 100%;
+    margin-left: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+
     
 h1{
-    color: #262528;
-    font-size: 5vw;
+    color: hsl(260, 4%, 15%);
+    font-size: 2em;
     font-family: Title;
 
 }   
 
 #table{
     background-color: #fff;
-    width: 35vw;
-    height: 60vh;
+    width: 85%;
+    height: 100%;
     border-radius: 5%;
     display: flex;
     justify-content: center;
     border-color: #000;
     flex-direction: column;
-    top: -40px;
     position: relative;
-    margin: 0%;
+    padding-bottom: 3em;
+   
 
 
 th{
@@ -79,7 +86,8 @@ th{
     justify-content: center;
     font-family: Title;
     color: #fff;
-    font-size: 1.5vw;
+    padding: 1em;
+    font-size: 1.5em;
     background-color: #A08AEE;
 
 }
@@ -87,6 +95,13 @@ td{
     color: #262528;
 }
 }
+
+.superDiv   {
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 </style>

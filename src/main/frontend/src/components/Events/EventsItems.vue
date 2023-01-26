@@ -29,12 +29,23 @@
   
   <style lang="scss" scoped>
 
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    grid-auto-rows: minmax(13em, 7em);
+    background-color: rgba(227, 217, 231);
+
+    border-radius: 2em;
+    margin-left: 1em;
+  
   .rollingStSection 
   {
   align-items: center ;
   display: block;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3em;
   }
   .sportSection 
   {
@@ -42,6 +53,7 @@
   display: block;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3em;
   }
   .openAtpSection 
   {
@@ -49,6 +61,7 @@
   display: block;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3em;
   }
   .bowlSection 
   {
@@ -56,19 +69,9 @@
   display: block;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3em;
   }
-
-  //Contenedor de eventos
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
-    grid-auto-rows: minmax(13em, 7em);
-    background-color: rgba(227, 217, 231);
-    padding: 1em;
-    border-radius: 2em;
-    margin-left: 1em;
-  }
+ 
   .imgEvent {
     max-width: 17em;
     max-height: 7em;
@@ -83,6 +86,7 @@
     min-width: 6em;
     max-width: 95%;
     border-radius: 18px;
+    
   }
 
   .imgSporting  {
@@ -102,13 +106,22 @@
     border-radius: 18px;
   }
 
-  //Titulos de los eventos
   h3 {
     font-size: 90%;
     font-weight: 500;
     color: #33206c;
+    margin-bottom: 3em;
   }
-  
+}
+
+@media (max-width: 425px)  {
+ 
+ .wrapper  {
+  display: flex;
+  flex-direction:column;
+  padding-bottom: 5em;
+ }
+}
 
   </style>
   
