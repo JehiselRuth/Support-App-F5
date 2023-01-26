@@ -7,7 +7,7 @@ public class MysqlConnexion {
     public Connection conn;
     private String driver = "com.mysql.cj.jdbc.Driver";
 
-    private String url = "jdbc:mysql://localhost:3306/db_supportapp?" +
+    private String url = "jdbc:mysql://localhost:3307/db_supportapp?" +
     "useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 
     public MysqlConnexion() {

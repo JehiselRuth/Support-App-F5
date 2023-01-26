@@ -3,6 +3,7 @@ package api.payloads;
 import java.sql.Date;
 
 public class RequestPayload {
+    private int id;
 private String name;
 private Date date;
 private String event;
@@ -30,6 +31,12 @@ public String getDescription() {
 }
 public void setDescription(String description) {
     this.description = description;
+}
+public void setId(int id) {
+this.id = id;
+}
+public int getId() {
+    return id;
 }
  
 }

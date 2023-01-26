@@ -39,7 +39,22 @@ public class RequestController extends HttpServlet{
             out.println(View.show(message));
         }
         }
-        
+        @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        resp.setContentType("application/json;charset=utf-8");
+        PrintWriter out = resp.getWriter();
+
+        try {
+            Object request = requestService.store(req.getReader());
+            out.println(View.show(request));
+            resp.setStatus(HttpServletResponse.SC_CREATED);
+        } catch (Exception e) {
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            System.out.println("Error added: " + e.getMessage());
+        }
+
+    }
     }
     
     

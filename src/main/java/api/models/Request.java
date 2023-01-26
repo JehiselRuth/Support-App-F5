@@ -12,6 +12,7 @@ import api.payloads.RequestPayload;
 import api.repositories.mysql.MysqlConnexion;
 
 public class Request {
+    private int id;
     private String name;
     private Date date;
     private String event;
@@ -24,11 +25,20 @@ public class Request {
 
     
 
-    public Request(String name, Date date, String event, String description) {
+    public Request(int id, String name, Date date, String event, String description) {
+        this.id = id;
         this.name = name;
         this.date = date;
         this.event = event;
         this.description = description;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Request() {
@@ -85,9 +95,10 @@ public class Request {
 
             while (rs.next()) {
                 RequestPayload request = new RequestPayload();
-                request.setEvent(rs.getString("event"));
+                request.setId(rs.getInt("id"));  
                 request.setName(rs.getString("name"));
                 request.setDate(rs.getDate("date"));
+                request.setEvent(rs.getString("event"));
                 request.setDescription(rs.getString("description"));
                 requests.add(request);
             }

@@ -8,6 +8,7 @@ public class View {
 
     public static String show(Object data) {
         String json = gson.toJson(data);
+        System.out.println(json);
         return json;
     }
 
