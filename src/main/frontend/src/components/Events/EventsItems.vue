@@ -64,7 +64,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     grid-auto-rows: minmax(13em, 7em);
-    background-color: rgba(227, 217, 231, 0.6);
+    background-color: rgba(227, 217, 231);
     padding: 1em;
     border-radius: 2em;
     margin-left: 1em;
@@ -82,20 +82,24 @@
 .imgRollingStones  {
     min-width: 6em;
     max-width: 95%;
+    border-radius: 18px;
   }
 
   .imgSporting  {
     min-width: 6em;
     max-width: 95%;
+    border-radius: 18px;
   }
 
   .imgOpenAtp  {
     min-width: 6em;
     max-width: 95%;
+    border-radius: 18px;
   }
    .imgBowl  {
     min-width: 6em;
     max-width: 95%;
+    border-radius: 18px;
   }
 
   //Titulos de los eventos
@@ -105,7 +109,6 @@
     color: #33206c;
   }
   
-
 
   </style>
   

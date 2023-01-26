@@ -27,9 +27,15 @@ nav {
   width: 11em;
   height: 100%;
   margin-bottom: 4%;
-  background-color: rgba(227, 217, 231, 0.5);
+  background-color: rgba(227, 217, 231);
   border-bottom: 1px solid;
   border-radius: 15px;
+  border-color: #33206C;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #33206C;
+  border-style: solid;
+  border-width: 1px;
 }
 
 //menú del nav
@@ -55,6 +61,9 @@ nav a {
   border-radius: 14px;
   font-size: 1.2em;
   background-color: #A08AEE;
+  border-color: #33206C;
+  border-style: solid;
+  border-width: 1px;
 }
 
 
@@ -65,29 +74,38 @@ nav a {
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   nav  {
     margin-left: -34%;
+    
   }
 }
 
 @media (min-width: 768px) {
-  
+  //Aquí nav terco
   nav {
-    
     font-size: 1em;
     padding: 0.5rem 0;
-    margin-top: 3rem;
+    margin-top: 4rem;
     height: 26rem;
 
   }
 }
 
+@media (min-width: 768px) {
+  //Aquí nav terco
+  nav {
+   margin-right: 4em;
+  }
+}
+
+
+
 @media (max-width: 320px) 
 
  {
   header  {
-text-align: center;
+  text-align: center;
   justify-content: center;
   align-items: center;  
  }
