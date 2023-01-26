@@ -12,6 +12,11 @@ import  EventsItems from '../components/Events/EventsItems.vue'
 
 <style lang="scss" scoped>
 
+.EventsItems{
+ display: flex;
+ justify-content: center;
+}
+
 @media (min-width: 1024px) 
 
  {

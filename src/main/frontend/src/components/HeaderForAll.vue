@@ -19,18 +19,23 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
+@font-face{
+    font-family: Title;
+    src:url(../assets/Expletus_Sans.zip)
+}
 
-//Titulo de la pagina
 h1 {
+  font-family: Title;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight:600;
-  font-size: 3rem;
+  font-size: 7vw;
   margin-bottom: 5%;
 }
-//Texto inicial de la pagina
+
 h3 {
+  font-family: Title;
   font-size: 1.6rem;
   text-align: center;
   color: #ffffff;

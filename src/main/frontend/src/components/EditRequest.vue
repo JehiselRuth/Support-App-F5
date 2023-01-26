@@ -87,7 +87,7 @@
     justify-content: space-between;
     justify-content: space-around;
     bottom: 80px;
-    position: absolute;
+    position: relative;
 
 #cancel{
     border-radius: 10vw;

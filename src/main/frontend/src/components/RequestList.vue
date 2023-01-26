@@ -69,9 +69,14 @@ h1{
     justify-content: center;
     border-color: #000;
     flex-direction: column;
+    top: -40px;
+    position: relative;
+    margin: 0%;
 
 
 th{
+    justify-content: flex-start;
+    justify-content: center;
     font-family: Title;
     color: #fff;
     font-size: 1.5vw;
