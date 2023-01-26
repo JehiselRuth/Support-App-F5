@@ -3,7 +3,7 @@ package api.payloads;
 import java.sql.Date;
 
 public class RequestPayload {
-    private int id;
+private int id;
 private String name;
 private Date date;
 private String event;

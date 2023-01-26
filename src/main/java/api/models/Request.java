@@ -78,7 +78,7 @@ public class Request {
 
     @Override
     public String toString() {
-        return "request [name=" + name + ", date=" + date + ", event=" + event + ", description=" + description + "]";
+        return "request [id="+ id +" name=" + name + ", date=" + date + ", event=" + event + ", description=" + description + "]";
     }
 
 
@@ -114,18 +114,23 @@ public class Request {
 
     }
   public RequestPayload save(RequestPayload request) throws SQLException {
-    String sql_insert = "INSERT INTO requests (name,date,event,description) VALUES (?,?,?,?)";
+    String sql_insert = "INSERT INTO request (id,name,date,event,description) VALUES (?,?,?,?,?)";
     PreparedStatement preparedStatement = repository.conn.prepareStatement(sql_insert);
-        preparedStatement.setString(1, request.getName());
-        preparedStatement.setDate(2, null);
-        preparedStatement.setString(3, null);
-        preparedStatement.setString(4, null);
+    preparedStatement.setInt(1, request.getId());
+        preparedStatement.setString(2, request.getName());
+        preparedStatement.setDate(3, request.getDate());
+        preparedStatement.setString(4, request.getEvent());
+        preparedStatement.setString(5, request.getDescription());
         preparedStatement.executeUpdate();
         preparedStatement.close();
         Statement statement = repository.conn.createStatement();
+
+
+
         String sql = String.format("SELECT * FROM %s ORDER BY date DESC", table);
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
+            request.setId(rs.getInt("id"));
             request.setName(rs.getString("name"));
             request.setDate(rs.getDate("date"));
             request.setEvent(rs.getString("event"));
