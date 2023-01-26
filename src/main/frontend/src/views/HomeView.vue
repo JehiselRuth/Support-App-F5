@@ -1,11 +1,17 @@
 <script setup>
+
 import  EventsItems from '../components/Events/EventsItems.vue'
+import Form from '../components/RegistrationForm.vue';
 
 </script>
 
 <template>
   <main>
+
     <EventsItems />
+
+    <Form></Form>
+
   </main>
 </template>
 
