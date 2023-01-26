@@ -36,6 +36,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    justify-content: center;
 
  h1{
     color: #262528;
@@ -51,6 +52,7 @@
     border-radius: 5%;
     display: flex;
     justify-content: center;
+    align-items: center;
     
 #inputs{
     display: flex;
@@ -86,10 +88,11 @@
 }
 
 #buttons{
+align-items: baseline;
 justify-content: space-between;
 justify-content: space-around;
-bottom: 80px;
-position: absolute;
+align-content: inherit;
+
 
 
 

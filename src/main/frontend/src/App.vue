@@ -31,8 +31,8 @@ import HeaderForAll from './components/HeaderForAll.vue'
 
 //este es contenedor del nav
 nav {
-  width: 11em;
-  height: 100%;
+  width: 15vw;
+  height: 10vh;
   margin-bottom: 4%;
   background-color: rgba(227, 217, 231);
   border-bottom: 1px solid;
@@ -70,7 +70,7 @@ nav a {
 @media (min-width: 1440px) {
 
   nav  {
-    // margin-left: -54%;
+    margin-left: -54%;
   }
 }
 
