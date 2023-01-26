@@ -1,9 +1,13 @@
 <script setup>
-import Form from '../components/RegistrationForm.vue';
+import RequestList from '../components/RequestList.vue';
+import RegistrationForm from '../components/RegistrationForm.vue';
+import EditRequest from '../components/EditRequest.vue'
 </script>
 
 <template>
   <main>
-    <Form></Form>
+    <RequestList></RequestList>
+ 
+    <bigDiv></bigDiv>
   </main>
 </template>
